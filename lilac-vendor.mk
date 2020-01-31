@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/bin/startup-logger:system/bin/startup-logger \
     vendor/sony/lilac/proprietary/bin/taimport:system/bin/taimport \
     vendor/sony/lilac/proprietary/bin/updatemiscta:system/bin/updatemiscta \
-    vendor/sony/lilac/proprietary/etc/cleanlostfound.sh:system/etc/cleanlostfound.sh \
+    vendor/sony/lilac/proprietary/bin/wfdservice:system/bin/wfdservice \
     vendor/sony/lilac/proprietary/etc/customization/modem/amss_fs_empty.mbn:system/etc/customization/modem/amss_fs_empty.mbn \
     vendor/sony/lilac/proprietary/etc/customization/modem/amss_fsg_lilac_a1_austria_volte_vowifi_tar.mbn:system/etc/customization/modem/amss_fsg_lilac_a1_austria_volte_vowifi_tar.mbn \
     vendor/sony/lilac/proprietary/etc/customization/modem/amss_fsg_lilac_airtel_in_ims_tar.mbn:system/etc/customization/modem/amss_fsg_lilac_airtel_in_ims_tar.mbn \
@@ -258,16 +258,14 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/etc/firmware/tztpm.b07:system/etc/firmware/tztpm.b07 \
     vendor/sony/lilac/proprietary/etc/firmware/tztpm.mdt:system/etc/firmware/tztpm.mdt \
     vendor/sony/lilac/proprietary/etc/firmware/ufs/01AD-483238553632333031414D5220202020-D003.bin:system/etc/firmware/ufs/01AD-483238553632333031414D5220202020-D003.bin \
-    vendor/sony/lilac/proprietary/etc/init.ssr_level.sh:system/etc/init.ssr_level.sh \
     vendor/sony/lilac/proprietary/etc/init/cacaoserver.rc:system/etc/init/cacaoserver.rc \
-    vendor/sony/lilac/proprietary/etc/init/cleanlostfound.rc:system/etc/init/cleanlostfound.rc \
     vendor/sony/lilac/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
     vendor/sony/lilac/proprietary/etc/init/mssconfig.rc:system/etc/init/mssconfig.rc \
     vendor/sony/lilac/proprietary/etc/init/perfservice.rc:system/etc/init/perfservice.rc \
-    vendor/sony/lilac/proprietary/etc/init/ssr_dumper.rc:system/etc/init/ssr_dumper.rc \
     vendor/sony/lilac/proprietary/etc/init/startup-logger.rc:system/etc/init/startup-logger.rc \
     vendor/sony/lilac/proprietary/etc/init/taimport.rc:system/etc/init/taimport.rc \
     vendor/sony/lilac/proprietary/etc/init/updatemiscta.rc:system/etc/init/updatemiscta.rc \
+    vendor/sony/lilac/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/sony/lilac/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/sony/lilac/proprietary/etc/permissions/com.fingerprints.extension.xml:system/etc/permissions/com.fingerprints.extension.xml \
     vendor/sony/lilac/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
@@ -328,17 +326,28 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/lib/com.qualcomm.qti.uceservice@2.0.so:system/lib/com.qualcomm.qti.uceservice@2.0.so \
     vendor/sony/lilac/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
     vendor/sony/lilac/proprietary/lib/com.quicinc.cne.server@1.0.so:system/lib/com.quicinc.cne.server@1.0.so \
+    vendor/sony/lilac/proprietary/lib/extractors/libmmparser.so:system/lib/extractors/libmmparser.so \
     vendor/sony/lilac/proprietary/lib/lib-imscamera.so:system/lib/lib-imscamera.so \
     vendor/sony/lilac/proprietary/lib/lib-imsvideocodec.so:system/lib/lib-imsvideocodec.so \
     vendor/sony/lilac/proprietary/lib/lib-imsvt.so:system/lib/lib-imsvt.so \
     vendor/sony/lilac/proprietary/lib/lib-imsvtextutils.so:system/lib/lib-imsvtextutils.so \
     vendor/sony/lilac/proprietary/lib/lib-imsvtutils.so:system/lib/lib-imsvtutils.so \
+    vendor/sony/lilac/proprietary/lib/libFidoCryptoJNI.so:system/lib/libFidoCryptoJNI.so \
+    vendor/sony/lilac/proprietary/lib/libFidoCrypto_system.so:system/lib/libFidoCrypto_system.so \
+    vendor/sony/lilac/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
+    vendor/sony/lilac/proprietary/lib/libGPQTEEC_system.so:system/lib/libGPQTEEC_system.so \
+    vendor/sony/lilac/proprietary/lib/libGPTEE_system.so:system/lib/libGPTEE_system.so \
     vendor/sony/lilac/proprietary/lib/libMiscTAApi.sony.so:system/lib/libMiscTAApi.sony.so \
     vendor/sony/lilac/proprietary/lib/libMiscTaWrapper.so:system/lib/libMiscTaWrapper.so \
+    vendor/sony/lilac/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
+    vendor/sony/lilac/proprietary/lib/libOpenCL_system.so:system/lib/libOpenCL_system.so \
+    vendor/sony/lilac/proprietary/lib/libQTEEConnector_system.so:system/lib/libQTEEConnector_system.so \
+    vendor/sony/lilac/proprietary/lib/libadsprpc_system.so:system/lib/libadsprpc_system.so \
     vendor/sony/lilac/proprietary/lib/libcacao_client.so:system/lib/libcacao_client.so \
     vendor/sony/lilac/proprietary/lib/libcacao_pal.so:system/lib/libcacao_pal.so \
     vendor/sony/lilac/proprietary/lib/libcacao_process_ctrl_gateway.so:system/lib/libcacao_process_ctrl_gateway.so \
     vendor/sony/lilac/proprietary/lib/libcacao_service.so:system/lib/libcacao_service.so \
+    vendor/sony/lilac/proprietary/lib/libcdsprpc_system.so:system/lib/libcdsprpc_system.so \
     vendor/sony/lilac/proprietary/lib/libdiag_system.so:system/lib/libdiag_system.so \
     vendor/sony/lilac/proprietary/lib/libdpmctmgr.so:system/lib/libdpmctmgr.so \
     vendor/sony/lilac/proprietary/lib/libdpmfdmgr.so:system/lib/libdpmfdmgr.so \
@@ -352,16 +361,45 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/lib/libjni_snapcammosaic.so:system/lib/libjni_snapcammosaic.so \
     vendor/sony/lilac/proprietary/lib/libjni_snapcamtinyplanet.so:system/lib/libjni_snapcamtinyplanet.so \
     vendor/sony/lilac/proprietary/lib/liblocationservice_jni.so:system/lib/liblocationservice_jni.so \
+    vendor/sony/lilac/proprietary/lib/libmdsprpc_system.so:system/lib/libmdsprpc_system.so \
+    vendor/sony/lilac/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
+    vendor/sony/lilac/proprietary/lib/libmmparser_lite.so:system/lib/libmmparser_lite.so \
+    vendor/sony/lilac/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+    vendor/sony/lilac/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
+    vendor/sony/lilac/proprietary/lib/libqmi_cci_system.so:system/lib/libqmi_cci_system.so \
     vendor/sony/lilac/proprietary/lib/libqti-iopd-client_system.so:system/lib/libqti-iopd-client_system.so \
     vendor/sony/lilac/proprietary/lib/libqti-perfd-client_system.so:system/lib/libqti-perfd-client_system.so \
     vendor/sony/lilac/proprietary/lib/libqti-util_system.so:system/lib/libqti-util_system.so \
     vendor/sony/lilac/proprietary/lib/libqti_performance.so:system/lib/libqti_performance.so \
     vendor/sony/lilac/proprietary/lib/librcc.so:system/lib/librcc.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsdm-disp-apis.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-disp-apis.so \
+    vendor/sony/lilac/proprietary/lib/libsdsprpc_system.so:system/lib/libsdsprpc_system.so \
+    vendor/sony/lilac/proprietary/lib/libseccam.so:system/lib/libseccam.so \
+    vendor/sony/lilac/proprietary/lib/libsecureui_svcsock_system.so:system/lib/libsecureui_svcsock_system.so \
     vendor/sony/lilac/proprietary/lib/libseemore.so:system/lib/libseemore.so \
+    vendor/sony/lilac/proprietary/lib/libsensor1.so:system/lib/libsensor1.so \
+    vendor/sony/lilac/proprietary/lib/libsensor_reg.so:system/lib/libsensor_reg.so \
+    vendor/sony/lilac/proprietary/lib/libsensor_test.so:system/lib/libsensor_test.so \
     vendor/sony/lilac/proprietary/lib/libsnappy.so:system/lib/libsnappy.so \
     vendor/sony/lilac/proprietary/lib/libsys-utils-system.so:system/lib/libsys-utils-system.so \
     vendor/sony/lilac/proprietary/lib/libtlcore.so:system/lib/libtlcore.so \
+    vendor/sony/lilac/proprietary/lib/libwfdavenhancements.so:system/lib/libwfdavenhancements.so \
+    vendor/sony/lilac/proprietary/lib/libwfdclient.so:system/lib/libwfdclient.so \
+    vendor/sony/lilac/proprietary/lib/libwfdcodecv4l2.so:system/lib/libwfdcodecv4l2.so \
+    vendor/sony/lilac/proprietary/lib/libwfdcommonutils.so:system/lib/libwfdcommonutils.so \
+    vendor/sony/lilac/proprietary/lib/libwfdconfigutils.so:system/lib/libwfdconfigutils.so \
+    vendor/sony/lilac/proprietary/lib/libwfdmminterface.so:system/lib/libwfdmminterface.so \
+    vendor/sony/lilac/proprietary/lib/libwfdmmsink.so:system/lib/libwfdmmsink.so \
+    vendor/sony/lilac/proprietary/lib/libwfdmmsrc.so:system/lib/libwfdmmsrc.so \
+    vendor/sony/lilac/proprietary/lib/libwfdnative.so:system/lib/libwfdnative.so \
+    vendor/sony/lilac/proprietary/lib/libwfdrtsp.so:system/lib/libwfdrtsp.so \
+    vendor/sony/lilac/proprietary/lib/libwfdservice.so:system/lib/libwfdservice.so \
+    vendor/sony/lilac/proprietary/lib/libwfdsm.so:system/lib/libwfdsm.so \
+    vendor/sony/lilac/proprietary/lib/libwfduibcinterface.so:system/lib/libwfduibcinterface.so \
+    vendor/sony/lilac/proprietary/lib/libwfduibcsink.so:system/lib/libwfduibcsink.so \
+    vendor/sony/lilac/proprietary/lib/libwfduibcsinkinterface.so:system/lib/libwfduibcsinkinterface.so \
+    vendor/sony/lilac/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
+    vendor/sony/lilac/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
     vendor/sony/lilac/proprietary/lib/libxt_native.so:system/lib/libxt_native.so \
     vendor/sony/lilac/proprietary/lib/vendor.display.color@1.0.so:system/lib/vendor.display.color@1.0.so \
     vendor/sony/lilac/proprietary/lib/vendor.display.color@1.1.so:system/lib/vendor.display.color@1.1.so \
@@ -416,17 +454,28 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/lib64/com.qualcomm.qti.uceservice@2.0.so:system/lib64/com.qualcomm.qti.uceservice@2.0.so \
     vendor/sony/lilac/proprietary/lib64/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib64/com.qualcomm.qti.wifidisplayhal@1.0.so \
     vendor/sony/lilac/proprietary/lib64/com.quicinc.cne.server@1.0.so:system/lib64/com.quicinc.cne.server@1.0.so \
+    vendor/sony/lilac/proprietary/lib64/extractors/libmmparser.so:system/lib64/extractors/libmmparser.so \
     vendor/sony/lilac/proprietary/lib64/lib-imscamera.so:system/lib64/lib-imscamera.so \
     vendor/sony/lilac/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
     vendor/sony/lilac/proprietary/lib64/lib-imsvt.so:system/lib64/lib-imsvt.so \
     vendor/sony/lilac/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
     vendor/sony/lilac/proprietary/lib64/lib-imsvtutils.so:system/lib64/lib-imsvtutils.so \
+    vendor/sony/lilac/proprietary/lib64/libFidoCryptoJNI.so:system/lib64/libFidoCryptoJNI.so \
+    vendor/sony/lilac/proprietary/lib64/libFidoCrypto_system.so:system/lib64/libFidoCrypto_system.so \
+    vendor/sony/lilac/proprietary/lib64/libFileMux.so:system/lib64/libFileMux.so \
+    vendor/sony/lilac/proprietary/lib64/libGPQTEEC_system.so:system/lib64/libGPQTEEC_system.so \
+    vendor/sony/lilac/proprietary/lib64/libGPTEE_system.so:system/lib64/libGPTEE_system.so \
     vendor/sony/lilac/proprietary/lib64/libMiscTAApi.sony.so:system/lib64/libMiscTAApi.sony.so \
     vendor/sony/lilac/proprietary/lib64/libMiscTaWrapper.so:system/lib64/libMiscTaWrapper.so \
+    vendor/sony/lilac/proprietary/lib64/libOmxMux.so:system/lib64/libOmxMux.so \
+    vendor/sony/lilac/proprietary/lib64/libOpenCL_system.so:system/lib64/libOpenCL_system.so \
+    vendor/sony/lilac/proprietary/lib64/libQTEEConnector_system.so:system/lib64/libQTEEConnector_system.so \
+    vendor/sony/lilac/proprietary/lib64/libadsprpc_system.so:system/lib64/libadsprpc_system.so \
     vendor/sony/lilac/proprietary/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
     vendor/sony/lilac/proprietary/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so \
     vendor/sony/lilac/proprietary/lib64/libcacao_client.so:system/lib64/libcacao_client.so \
     vendor/sony/lilac/proprietary/lib64/libcacao_pal.so:system/lib64/libcacao_pal.so \
+    vendor/sony/lilac/proprietary/lib64/libcdsprpc_system.so:system/lib64/libcdsprpc_system.so \
     vendor/sony/lilac/proprietary/lib64/libdevice_security_client.so:system/lib64/libdevice_security_client.so \
     vendor/sony/lilac/proprietary/lib64/libdiag_system.so:system/lib64/libdiag_system.so \
     vendor/sony/lilac/proprietary/lib64/libdpmctmgr.so:system/lib64/libdpmctmgr.so \
@@ -441,16 +490,30 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/lib64/libjni_snapcammosaic.so:system/lib64/libjni_snapcammosaic.so \
     vendor/sony/lilac/proprietary/lib64/libjni_snapcamtinyplanet.so:system/lib64/libjni_snapcamtinyplanet.so \
     vendor/sony/lilac/proprietary/lib64/liblocationservice_jni.so:system/lib64/liblocationservice_jni.so \
+    vendor/sony/lilac/proprietary/lib64/libmdsprpc_system.so:system/lib64/libmdsprpc_system.so \
+    vendor/sony/lilac/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
+    vendor/sony/lilac/proprietary/lib64/libmmparser_lite.so:system/lib64/libmmparser_lite.so \
+    vendor/sony/lilac/proprietary/lib64/libmmrtpdecoder.so:system/lib64/libmmrtpdecoder.so \
+    vendor/sony/lilac/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
+    vendor/sony/lilac/proprietary/lib64/libqmi_cci_system.so:system/lib64/libqmi_cci_system.so \
     vendor/sony/lilac/proprietary/lib64/libqti-iopd-client_system.so:system/lib64/libqti-iopd-client_system.so \
     vendor/sony/lilac/proprietary/lib64/libqti-perfd-client_system.so:system/lib64/libqti-perfd-client_system.so \
     vendor/sony/lilac/proprietary/lib64/libqti-util_system.so:system/lib64/libqti-util_system.so \
     vendor/sony/lilac/proprietary/lib64/libqti_performance.so:system/lib64/libqti_performance.so \
     vendor/sony/lilac/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libsdm-disp-apis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-disp-apis.so \
+    vendor/sony/lilac/proprietary/lib64/libsdsprpc_system.so:system/lib64/libsdsprpc_system.so \
+    vendor/sony/lilac/proprietary/lib64/libseccam.so:system/lib64/libseccam.so \
+    vendor/sony/lilac/proprietary/lib64/libsecureui_svcsock_system.so:system/lib64/libsecureui_svcsock_system.so \
     vendor/sony/lilac/proprietary/lib64/libseemore.so:system/lib64/libseemore.so \
+    vendor/sony/lilac/proprietary/lib64/libsensor1.so:system/lib64/libsensor1.so \
+    vendor/sony/lilac/proprietary/lib64/libsensor_reg.so:system/lib64/libsensor_reg.so \
+    vendor/sony/lilac/proprietary/lib64/libsensor_test.so:system/lib64/libsensor_test.so \
     vendor/sony/lilac/proprietary/lib64/libsnappy.so:system/lib64/libsnappy.so \
     vendor/sony/lilac/proprietary/lib64/libsys-utils-system.so:system/lib64/libsys-utils-system.so \
     vendor/sony/lilac/proprietary/lib64/libtlcore.so:system/lib64/libtlcore.so \
+    vendor/sony/lilac/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
+    vendor/sony/lilac/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
     vendor/sony/lilac/proprietary/lib64/libxt_native.so:system/lib64/libxt_native.so \
     vendor/sony/lilac/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/sony/lilac/proprietary/lib64/vendor.display.color@1.1.so:system/lib64/vendor.display.color@1.1.so \
@@ -524,11 +587,13 @@ PRODUCT_PACKAGES += \
     SemcCameraUI-xhdpi-release \
     SomcMovieCreator-release \
     SoundPhotoCamera-xhdpi-release \
+    WfdService \
     com.qualcomm.location \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
     xtra_t_app \
+    WfdCommon \
     com.fingerprints.extension \
     qcrilhook
 PRODUCT_COPY_FILES += \
@@ -546,6 +611,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/bin/ffu:$(TARGET_COPY_OUT_VENDOR)/bin/ffu \
     vendor/sony/lilac/proprietary/vendor/bin/hbtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/hbtp_daemon \
     vendor/sony/lilac/proprietary/vendor/bin/hci_qcomm_init:$(TARGET_COPY_OUT_VENDOR)/bin/hci_qcomm_init \
+    vendor/sony/lilac/proprietary/vendor/bin/hdcp1prov:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp1prov \
+    vendor/sony/lilac/proprietary/vendor/bin/hdcp2p2prov:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp2p2prov \
     vendor/sony/lilac/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/sony/lilac/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/sony/lilac/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
@@ -561,6 +628,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/bin/hw/vendor.qti.hardware.perf@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.perf@1.0-service \
     vendor/sony/lilac/proprietary/vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti \
     vendor/sony/lilac/proprietary/vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service \
+    vendor/sony/lilac/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor/sony/lilac/proprietary/vendor/bin/hw/vendor.semc.hardware.light@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.semc.hardware.light@1.0-service \
     vendor/sony/lilac/proprietary/vendor/bin/hw/vendor.semc.hardware.secd@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.semc.hardware.secd@1.0-service \
     vendor/sony/lilac/proprietary/vendor/bin/hw/vendor.semc.hardware.thermal@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.semc.hardware.thermal@1.0-service \
@@ -574,8 +642,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
     vendor/sony/lilac/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
     vendor/sony/lilac/proprietary/vendor/bin/imsrcsd:$(TARGET_COPY_OUT_VENDOR)/bin/imsrcsd \
-    vendor/sony/lilac/proprietary/vendor/bin/init.qcom.early_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \
-    vendor/sony/lilac/proprietary/vendor/bin/init.qti.ims.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.ims.sh \
     vendor/sony/lilac/proprietary/vendor/bin/ipacm-diag:$(TARGET_COPY_OUT_VENDOR)/bin/ipacm-diag \
     vendor/sony/lilac/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
     vendor/sony/lilac/proprietary/vendor/bin/keyprovd:$(TARGET_COPY_OUT_VENDOR)/bin/keyprovd \
@@ -596,6 +662,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/bin/sct_service:$(TARGET_COPY_OUT_VENDOR)/bin/sct_service \
     vendor/sony/lilac/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
     vendor/sony/lilac/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
+    vendor/sony/lilac/proprietary/vendor/bin/ssgqmigd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgqmigd \
     vendor/sony/lilac/proprietary/vendor/bin/ssr_diag:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_diag \
     vendor/sony/lilac/proprietary/vendor/bin/ssr_setup:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_setup \
     vendor/sony/lilac/proprietary/vendor/bin/subsystem_ramdump:$(TARGET_COPY_OUT_VENDOR)/bin/subsystem_ramdump \
@@ -907,6 +974,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@1.0-service.rc \
     vendor/sony/lilac/proprietary/vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc \
     vendor/sony/lilac/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
+    vendor/sony/lilac/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
     vendor/sony/lilac/proprietary/vendor/etc/init/vendor.semc.hardware.light@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.semc.hardware.light@1.0-service.rc \
     vendor/sony/lilac/proprietary/vendor/etc/init/vendor.semc.hardware.secd@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.semc.hardware.secd@1.0-service.rc \
     vendor/sony/lilac/proprietary/vendor/etc/init/vendor.semc.hardware.thermal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.semc.hardware.thermal@1.0-service.rc \
@@ -916,7 +984,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/etc/init/vendor.somc.hardware.wifi@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.somc.hardware.wifi@2.0-service.rc \
     vendor/sony/lilac/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/sony/lilac/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    vendor/sony/lilac/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/sony/lilac/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/sony/lilac/proprietary/vendor/etc/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf \
     vendor/sony/lilac/proprietary/vendor/etc/perf/perf-profile1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile1.conf \
@@ -1094,10 +1161,12 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib/egl/libQTapGLES.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libQTapGLES.so \
     vendor/sony/lilac/proprietary/vendor/lib/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
     vendor/sony/lilac/proprietary/vendor/lib/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_esx.so \
+    vendor/sony/lilac/proprietary/vendor/lib/hw/activity_recognition.msm8998.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/activity_recognition.msm8998.so \
     vendor/sony/lilac/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so \
     vendor/sony/lilac/proprietary/vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
     vendor/sony/lilac/proprietary/vendor/lib/hw/android.hardware.gnss@1.1-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gnss@1.1-impl-qti.so \
     vendor/sony/lilac/proprietary/vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.keymaster@3.0-impl-qti.so \
+    vendor/sony/lilac/proprietary/vendor/lib/hw/audio.primary.msm8998.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msm8998.so \
     vendor/sony/lilac/proprietary/vendor/lib/hw/camera.lilac.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.lilac.so \
     vendor/sony/lilac/proprietary/vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qualcomm.qti.ant@1.0-impl.so \
     vendor/sony/lilac/proprietary/vendor/lib/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so \
@@ -1133,6 +1202,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib/libFlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libFlacSwDec.so \
     vendor/sony/lilac/proprietary/vendor/lib/libGPQTEEC_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPQTEEC_vendor.so \
     vendor/sony/lilac/proprietary/vendor/lib/libGPTEE_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPTEE_vendor.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPreqcancel.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGPreqcancel_svc.so \
     vendor/sony/lilac/proprietary/vendor/lib/libI420colorconvert.so:$(TARGET_COPY_OUT_VENDOR)/lib/libI420colorconvert.so \
     vendor/sony/lilac/proprietary/vendor/lib/libOmxAacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAacDec.so \
     vendor/sony/lilac/proprietary/vendor/lib/libOmxAlacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAlacDec.so \
@@ -1152,6 +1223,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib/libQTEEConnector_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQTEEConnector_vendor.so \
     vendor/sony/lilac/proprietary/vendor/lib/libRSDriver_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSDriver_adreno.so \
     vendor/sony/lilac/proprietary/vendor/lib/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSecureUILib.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libStDrvInt.so \
     vendor/sony/lilac/proprietary/vendor/lib/lib_fpc_tac_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_fpc_tac_shared.so \
     vendor/sony/lilac/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
     vendor/sony/lilac/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
@@ -1213,6 +1285,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib/libhbtpclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhbtpclient.so \
     vendor/sony/lilac/proprietary/vendor/lib/libhbtpdsp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhbtpdsp.so \
     vendor/sony/lilac/proprietary/vendor/lib/libhbtpfrmwk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhbtpfrmwk.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libhdcp1prov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdcp1prov.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libhdcp2p2prov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdcp2p2prov.so \
     vendor/sony/lilac/proprietary/vendor/lib/libhdcprx_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdcprx_module.so \
     vendor/sony/lilac/proprietary/vendor/lib/libhdcptx_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdcptx_module.so \
     vendor/sony/lilac/proprietary/vendor/lib/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_tm.so \
@@ -1313,6 +1387,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-diag.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmextension.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdsprpc.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecureui.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecureui_svcsock.so \
     vendor/sony/lilac/proprietary/vendor/lib/libseemore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libseemore.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor1.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_reg.so \
@@ -1361,6 +1437,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib/libsomc_yummyrsc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsomc_yummyrsc.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsony_fooddetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsony_fooddetect.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsony_naruto.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsony_naruto.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libsonydseehxwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsonydseehxwrapper.so \
     vendor/sony/lilac/proprietary/vendor/lib/libspcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspcom.so \
     vendor/sony/lilac/proprietary/vendor/lib/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspl.so \
     vendor/sony/lilac/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
@@ -1370,6 +1447,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib/libsys-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsys-utils.so \
     vendor/sony/lilac/proprietary/vendor/lib/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsystem_health_mon.so \
     vendor/sony/lilac/proprietary/vendor/lib/libthermal_engine.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermal_engine.so \
+    vendor/sony/lilac/proprietary/vendor/lib/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress_vendor.so \
     vendor/sony/lilac/proprietary/vendor/lib/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyxml2_1.so \
     vendor/sony/lilac/proprietary/vendor/lib/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtzdrmgenprov.so \
     vendor/sony/lilac/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so \
@@ -1489,10 +1567,12 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib64/egl/libQTapGLES.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libQTapGLES.so \
     vendor/sony/lilac/proprietary/vendor/lib64/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_adreno.so \
     vendor/sony/lilac/proprietary/vendor/lib64/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_esx.so \
+    vendor/sony/lilac/proprietary/vendor/lib64/hw/activity_recognition.msm8998.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/activity_recognition.msm8998.so \
     vendor/sony/lilac/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so \
     vendor/sony/lilac/proprietary/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
     vendor/sony/lilac/proprietary/vendor/lib64/hw/android.hardware.gnss@1.1-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@1.1-impl-qti.so \
     vendor/sony/lilac/proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so \
+    vendor/sony/lilac/proprietary/vendor/lib64/hw/audio.primary.msm8998.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.msm8998.so \
     vendor/sony/lilac/proprietary/vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so \
     vendor/sony/lilac/proprietary/vendor/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so \
     vendor/sony/lilac/proprietary/vendor/lib64/hw/lights.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/lights.default.so \
@@ -1596,6 +1676,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib64/libhbtpclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhbtpclient.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libhbtpdsp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhbtpdsp.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libhbtpfrmwk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhbtpfrmwk.so \
+    vendor/sony/lilac/proprietary/vendor/lib64/libhdcp1prov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdcp1prov.so \
+    vendor/sony/lilac/proprietary/vendor/lib64/libhdcp2p2prov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdcp2p2prov.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libhdcprx_module.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdcprx_module.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libhdcptx_module.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdcptx_module.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
@@ -1690,6 +1772,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib64/libsi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsi.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libslimclient.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libsns_low_lat_stream_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_low_lat_stream_stub.so \
+    vendor/sony/lilac/proprietary/vendor/lib64/libsonydseehxwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsonydseehxwrapper.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libspcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspcom.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspl.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
@@ -1699,6 +1782,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libthermal_engine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermal_engine.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
+    vendor/sony/lilac/proprietary/vendor/lib64/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_vendor.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libtpm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtpm.so \
     vendor/sony/lilac/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
