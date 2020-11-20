@@ -592,7 +592,6 @@ PRODUCT_PACKAGES += \
     ArtFilterCamera-xhdpi-release \
     CameraCommon \
     CameraPanorama-release \
-    CustomizationSelector \
     SemcCameraUI-xxhdpi-release \
     SomcMovieCreator-release \
     SoundPhotoCamera-xhdpi-release \
