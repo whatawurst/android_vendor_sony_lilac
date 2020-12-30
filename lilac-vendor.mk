@@ -277,9 +277,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/product/etc/permissions/com.qualcomm.qti.imscmservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qualcomm.qti.imscmservice.xml \
     vendor/sony/lilac/proprietary/etc/permissions/com.sonyericsson.android.semcrilextension.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonyericsson.android.semcrilextension.xml \
     vendor/sony/lilac/proprietary/etc/permissions/com.sonyericsson.idd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonyericsson.idd.xml \
-    vendor/sony/lilac/proprietary/etc/permissions/com.sonymobile.camera.addon.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.camera.addon.xml \
     vendor/sony/lilac/proprietary/etc/permissions/com.sonymobile.getmore.api.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.getmore.api.xml \
-    vendor/sony/lilac/proprietary/etc/permissions/com.sonymobile.imageprocessor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.imageprocessor.xml \
     vendor/sony/lilac/proprietary/etc/permissions/com.sonymobile.miscta.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.miscta.xml \
     vendor/sony/lilac/proprietary/product/etc/permissions/embms.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/embms.xml \
     vendor/sony/lilac/proprietary/product/etc/permissions/lpa.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/lpa.xml \
@@ -296,9 +294,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/product/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar \
     vendor/sony/lilac/proprietary/product/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qualcomm.qti.uceservice-V2.0-java.jar \
     vendor/sony/lilac/proprietary/framework/com.sonyericsson.idd_impl.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonyericsson.idd_impl.jar \
-    vendor/sony/lilac/proprietary/framework/com.sonymobile.camera.addon_impl.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonymobile.camera.addon_impl.jar \
     vendor/sony/lilac/proprietary/framework/com.sonymobile.getmore.api.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonymobile.getmore.api.jar \
-    vendor/sony/lilac/proprietary/framework/com.sonymobile.imageprocessor.bypasscamera_impl.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonymobile.imageprocessor.bypasscamera_impl.jar \
     vendor/sony/lilac/proprietary/framework/com.sonymobile.miscta_impl.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonymobile.miscta_impl.jar \
     vendor/sony/lilac/proprietary/product/framework/embmslibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/embmslibrary.jar \
     vendor/sony/lilac/proprietary/product/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/qti-telephony-common.jar \
@@ -336,7 +332,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/lib/libcdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcdsprpc_system.so \
     vendor/sony/lilac/proprietary/product/lib/libdiag_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdiag_system.so \
     vendor/sony/lilac/proprietary/lib/libdumpframework.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdumpframework.so \
-    vendor/sony/lilac/proprietary/lib/libimageprocessorjni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimageprocessorjni.so \
     vendor/sony/lilac/proprietary/product/lib/libimscamera_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libimscamera_jni.so \
     vendor/sony/lilac/proprietary/product/lib/libimsmedia_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libimsmedia_jni.so \
     vendor/sony/lilac/proprietary/lib/libjni_imageutil.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libjni_imageutil.so \
@@ -448,7 +443,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/lib64/libdevice_security_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdevice_security_client.so \
     vendor/sony/lilac/proprietary/product/lib64/libdiag_system.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libdiag_system.so \
     vendor/sony/lilac/proprietary/lib64/libdumpframework.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdumpframework.so \
-    vendor/sony/lilac/proprietary/lib64/libimageprocessorjni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimageprocessorjni.so \
     vendor/sony/lilac/proprietary/product/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libimscamera_jni.so \
     vendor/sony/lilac/proprietary/product/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libimsmedia_jni.so \
     vendor/sony/lilac/proprietary/lib64/libjni_imageutil.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libjni_imageutil.so \
@@ -510,19 +504,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/lib64/vendor.semc.system.idd@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.semc.system.idd@1.0.so \
     vendor/sony/lilac/proprietary/lib64/vendor.somc.hardware.miscta@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.somc.hardware.miscta@1.0.so \
     vendor/sony/lilac/proprietary/lib64/vendor.somc.hardware.security.secd@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.somc.hardware.security.secd@1.0.so \
-    vendor/sony/lilac/proprietary/priv-app/ArtFilterCamera-xhdpi-release/lib/armeabi/libnativeeffectengine.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/ArtFilterCamera-xhdpi-release/lib/armeabi/libnativeeffectengine.so \
-    vendor/sony/lilac/proprietary/priv-app/ArtFilterCamera-xhdpi-release/lib/armeabi/libyuvframe.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/ArtFilterCamera-xhdpi-release/lib/armeabi/libyuvframe.so \
-    vendor/sony/lilac/proprietary/priv-app/CameraPanorama-release/lib/arm64/libmorpho_jpeg_io.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/CameraPanorama-release/lib/arm64/libmorpho_jpeg_io.so \
-    vendor/sony/lilac/proprietary/priv-app/CameraPanorama-release/lib/arm64/libmorpho_memory_allocator.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/CameraPanorama-release/lib/arm64/libmorpho_memory_allocator.so \
-    vendor/sony/lilac/proprietary/priv-app/CameraPanorama-release/lib/arm64/libmorpho_panorama_gp2.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/CameraPanorama-release/lib/arm64/libmorpho_panorama_gp2.so \
-    vendor/sony/lilac/proprietary/priv-app/CameraPanorama-release/lib/arm64/libmorpho_sensor_fusion.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/CameraPanorama-release/lib/arm64/libmorpho_sensor_fusion.so \
-    vendor/sony/lilac/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libarcsoft_handsigns.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libarcsoft_handsigns.so \
-    vendor/sony/lilac/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libhandsigns_jni.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libhandsigns_jni.so \
-    vendor/sony/lilac/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libimage_converter.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libimage_converter.so \
-    vendor/sony/lilac/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libmpbase.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libmpbase.so \
-    vendor/sony/lilac/proprietary/priv-app/SoundPhotoCamera-xhdpi-release/lib/armeabi/libmpo.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SoundPhotoCamera-xhdpi-release/lib/armeabi/libmpo.so \
-    vendor/sony/lilac/proprietary/priv-app/SoundPhotoCamera-xhdpi-release/lib/armeabi/libnativebytebuffer.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SoundPhotoCamera-xhdpi-release/lib/armeabi/libnativebytebuffer.so \
-    vendor/sony/lilac/proprietary/priv-app/SoundPhotoCamera-xhdpi-release/lib/armeabi/libspf.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SoundPhotoCamera-xhdpi-release/lib/armeabi/libspf.so \
     vendor/sony/lilac/proprietary/product/bin/dpmd:$(TARGET_COPY_OUT_PRODUCT)/bin/dpmd \
     vendor/sony/lilac/proprietary/product/etc/init/dpmd.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/dpmd.rc \
     vendor/sony/lilac/proprietary/product/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qti.dpmframework.xml \
@@ -587,16 +568,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/lilac/proprietary/vendor/sony/touch/images/splash.png:$(TARGET_COPY_OUT_VENDOR)/sony/touch/images/splash.png
 
 PRODUCT_PACKAGES += \
-    CameraAddonPermission-release \
-    CameraCommonPermission-release \
-    CameraExtensionPermission-release \
-    ImageProcessorPermission-release \
-    ArtFilterCamera-xhdpi-release \
-    CameraCommon \
-    CameraPanorama-release \
-    SemcCameraUI-xxhdpi-release \
-    SomcMovieCreator-release \
-    SoundPhotoCamera-xhdpi-release \
     WfdService \
     QtiTelephonyService \
     datastatusnotification \
